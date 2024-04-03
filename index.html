@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="game-title">Jogo Adivinhação</h1>
+        <button id="reiniciar" onclick="restart()">Reiniciar</button>
+    </header>
+    <main>
+        <div id="gameselect-container">
+            <select name="nivel" id="nivel">
+                <option value="0">Selecione um modo de jogo</option>
+                <option value="1">Dificuldade Fácil (1 - 10)</option>
+                <option value="2">Dificuldade Media (1 - 50)</option>
+                <option value="3">Dificuldade Dificil (1 - 100)</option>
+            </select>
+            <button id="sendbutton" onclick="sendDificulty()">Escolher</button>
+        </div>
+        <h1 id="mode-text">Você escolheu o modo: <span id="mode-name"></span></h1>
+        <p id="chanceText">Você vai ter: <span id="chanceVisual"></span></p>
+        <div id="gameVisual">
+            <div id="gameVisualA">
+                <input type="number" id="change" placeholder="Coloque seu número aqui"  >
+                <button id="send-change" onclick="sendChange()">Enviar resposta</button>
+                <p id="gameText"></p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
